@@ -748,10 +748,10 @@
             <nav>
                 <ul>
                     <li><a href="#inicio" class="nav-link active" data-translate="nav_home">Inicio</a></li>
-                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-                    <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-                    <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="#proyectos" class="nav-link" data-translate="nav_projects">Proyectos</a></li>
+                    <li><a href="#habilidades" class="nav-link" data-translate="nav_skills">Habilidades</a></li>
+                    <li><a href="#sobre-mi" class="nav-link" data-translate="nav_about">Sobre mí</a></li>
+                    <li><a href="#contacto" class="nav-link" data-translate="nav_contact">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -763,30 +763,26 @@
                 <div class="hero-intro">
                     <h1><span class="highlight">Daniel de Castro Isasi</span></h1>
                 </div>
-                
-                <p class="hero-description">
-                    Desarrollador de videojuegos con un HND en Programación de videojuegos por la ESAT, una carrera de informática y máster en inteligencia artificial por la UPV.
-                    Tengo experiencia desarrollando proyectos tanto personales como académicos tanto en Unreal Engine 5 como en Unity.
-                </p>
-                
-                
+
+                <p class="hero-description" data-translate="hero_description">Desarrollador de videojuegos con un HND en Programación de videojuegos por la ESAT, una carrera de informática y máster en inteligencia artificial por la UPV. Tengo experiencia desarrollando proyectos tanto personales como académicos tanto en Unreal Engine 5 como en Unity.</p>
+
                 <div class="hero-cta">
-                    <a href="#proyectos" class="btn-primary">Ver mi trabajo</a>
-                    <a href="#contacto" class="btn-secondary">Hablemos</a>
+                    <a href="#proyectos" class="btn-primary" data-translate="hero_btn_work">Ver mi trabajo</a>
+                    <a href="#contacto" class="btn-secondary" data-translate="hero_btn_contact">Hablemos</a>
                 </div>
             </div>
         </section>
 
         <section id="proyectos">
-            <h2 class="section-title fade-up">Proyectos Destacados</h2>
-            <p class="section-subtitle fade-up">Una selección de mis trabajos más representativos</p>
-            
+            <h2 class="section-title fade-up" data-translate="projects_title">Proyectos Destacados</h2>
+            <p class="section-subtitle fade-up" data-translate="projects_subtitle">Una selección de mis trabajos más representativos</p>
+
             <div class="projects-container">
                 <div class="project fade-up">
-                    <div class="project-image"> <img src="res/CrowsNest2.jpg" alt="Inside the Crow's Nest" /></div>
+                    <div class="project-image"><img src="res/CrowsNest2.jpg" alt="Inside the Crow's Nest" /></div>
                     <div class="project-info">
-                        <h3>Inside the crow's nest</h3>
-                        <p>Proyecto final del HND en programación de videojuegos, desarrollado durante 9 meses en un equipo de 16 personas formado por programadores, artistas y diseñadores. El juego, creado con Unreal Engine, tiene una duración aproximada de hora y media y busca capturar la esencia de los survival horror clásicos como los primeros Resident Evil. Incluye controles tipo tanque, cámaras fijas, enemigos, puzles y gestión de inventario. A pesar de su enfoque nostálgico, se han modernizado tanto el control como la presentación para ofrecer una experiencia accesible y atractiva tanto para nuevos jugadores como para fans de los clásicos.</p>
+                        <h3 data-translate="project_crows_nest_title">Inside the crow's nest</h3>
+                        <p data-translate="project_crows_nest_description">Proyecto final del HND en programación de videojuegos...</p>
                         <div class="project-tech">
                             <span class="tech-tag">UE5</span>
                             <span class="tech-tag">C++</span>
@@ -795,7 +791,7 @@
                             <span class="tech-tag">Perforce</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://store.steampowered.com/app/3719120/Inside_the_Crows_Nest/">Steam page →</a>
+                            <a href="https://store.steampowered.com/app/3719120/Inside_the_Crows_Nest/" data-translate="project_crows_nest_link">Steam page →</a>
                         </div>
                     </div>
                 </div>
@@ -803,8 +799,8 @@
                 <div class="project fade-up">
                     <div class="project-image"><img src="res/Engine.png" alt="Graphics Engine" /></div>
                     <div class="project-info">
-                        <h3>Graphics Engine</h3>
-                        <p>Motor gráfico desarrollado desde cero. Implementa técnicas avanzadas como forward y deferred rendering, sistema de sombras, portales, físicas mediante el uso de la librería Bullet, scripting en Lua y una arquitectura ECS con jerarquías. Además, incluye herramientas de edición integradas con ImGui y un sistema de hilos para tareas pesadas.</p>
+                        <h3 data-translate="project_engine_title">Graphics Engine</h3>
+                        <p data-translate="project_engine_description">Motor gráfico desarrollado desde cero...</p>
                         <div class="project-tech">
                             <span class="tech-tag">OpenGL</span>
                             <span class="tech-tag">C++</span>
@@ -812,7 +808,7 @@
                             <span class="tech-tag">ImGui</span>
                         </div>
                         <div class="project-links">
-                            <a href="#">Ver demo →</a>
+                            <a href="#" data-translate="project_engine_link">Ver demo →</a>
                         </div>
                     </div>
                 </div>
@@ -820,8 +816,8 @@
                 <div class="project fade-up">
                     <div class="project-image"><img src="res/TFM.jpg" alt="Meta Avatars" /></div>
                     <div class="project-info">
-                        <h3>Networked Meta Avatars </h3>
-                        <p>Proyecto de realidad virtual desarrollado como parte del Trabajo de Fin de Máster, centrado en la integración de avatares de Meta en un entorno multijugador con interacción. Utilizando Proton y tecnología de Meta para VR, se implementó una sala virtual compartida donde varios usuarios pueden conectarse y comunicarse a través de sus avatares, con capacidad para interactuar con el entorno. El objetivo fue estudiar la viabilidad de utilizar entornos de realidad virtual como alternativa más humana y accesible a las sesiones psicológicas tradicionales, evitando la frialdad de las videollamadas sin requerir presencialidad.</p>
+                        <h3 data-translate="project_avatars_title">Networked Meta Avatars</h3>
+                        <p data-translate="project_avatars_description">Proyecto de realidad virtual desarrollado como parte del Trabajo de Fin de Máster...</p>
                         <div class="project-tech">
                             <span class="tech-tag">Unity</span>
                             <span class="tech-tag">Multiplayer</span>
@@ -830,8 +826,8 @@
                             <span class="tech-tag">Social VR</span>
                         </div>
                         <div class="project-links">
-                            <a href="#">Trailer →</a>
-                            <a href="#">Demo →</a>
+                            <a href="#" data-translate="project_avatars_link_trailer">Trailer →</a>
+                            <a href="#" data-translate="project_avatars_link_demo">Demo →</a>
                         </div>
                     </div>
                 </div>
@@ -839,16 +835,16 @@
                 <div class="project fade-up">
                     <div class="project-image"><img src="res/TFG.jpg" alt="TFG Game" /></div>
                     <div class="project-info">
-                        <h3>TFG Game</h3>
-                        <p>Videojuego 2D de plataformas desarrollado en Unity como parte del Trabajo de Fin de Grado, en colaboración con otro desarrollador y utilizando Git para control de versiones. El juego incluye enemigos con inteligencia artificial, un sistema de sigilo, loot e inventario, así como efectos de sonido y mecánicas de combate. Se centró en crear una experiencia fluida y completa desde el diseño hasta la implementación final.</p>
+                        <h3 data-translate="project_tfg_title">TFG Game</h3>
+                        <p data-translate="project_tfg_description">Videojuego 2D de plataformas desarrollado en Unity...</p>
                         <div class="project-tech">
                             <span class="tech-tag">Unity</span>
                             <span class="tech-tag">C#</span>
                             <span class="tech-tag">Git</span>
                         </div>
                         <div class="project-links">
-                            <a href="#">Ver demo →</a>
-                            <a href="#">Código fuente →</a>
+                            <a href="#" data-translate="project_tfg_link_demo">Ver demo →</a>
+                            <a href="#" data-translate="project_tfg_link_code">Código fuente →</a>
                         </div>
                     </div>
                 </div>
@@ -856,8 +852,8 @@
                 <div class="project fade-up">
                     <div class="project-image"><img src="res/SoulApart.png" alt="Soul apart" /></div>
                     <div class="project-info">
-                        <h3>Game Jam - Soul apart</h3>
-                        <p>Proyecto desarrollado en 48 horas como entrada para una game jam, en colaboración con diseñadores y artistas. Se trata de un juego 3D tipo bullet hell creado en Unity, en el que el jugador, con muy poca vida, debe esquivar ataques enemigos y devolver aquellos proyectiles que lo permiten para derrotar a una bruja. </p>
+                        <h3 data-translate="project_soul_title">Game Jam - Soul apart</h3>
+                        <p data-translate="project_soul_description">Proyecto desarrollado en 48 horas como entrada para una game jam...</p>
                         <div class="project-tech">
                             <span class="tech-tag">Unity</span>
                             <span class="tech-tag">C#</span>
@@ -865,128 +861,127 @@
                             <span class="tech-tag">Game jam</span>
                         </div>
                         <div class="project-links">
-                            <a href="#">Ver demo →</a>
-                            <a href="#">Código fuente →</a>
+                            <a href="#" data-translate="project_soul_link_demo">Ver demo →</a>
+                            <a href="#" data-translate="project_soul_link_code">Código fuente →</a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <div class="mini-projects" id="otros-proyectos">
-            <h2 class="section-title fade-up">Otros Proyectos</h2>
-            <p class="section-subtitle fade-up">Prototipos y proyectos secundarios</p>
-            
-            <div class="mini-projects-grid">
+            <h2 class="section-title fade-up" data-translate="other_projects_title">Otros Proyectos</h2>
+            <p class="section-subtitle fade-up" data-translate="other_projects_subtitle">Prototipos y proyectos secundarios</p>
 
+            <div class="mini-projects-grid">
                 <div class="mini-project-card fade-up">
                     <div class="mini-project-header">
                         <div class="mini-project-icon"><img src="res/gun.png" alt="FPS prototype" /></div>
-                        <h3>First person shooter prototype</h3>
+                        <h3 data-translate="mini_fps_title">First person shooter prototype</h3>
                     </div>
-                    <p>Shooter en primera persona desarrollado en Unreal Engine 5, centrado en una IA avanzada para enemigos mediante Behavior Trees. El proyecto destaca por crear combates dinámicos y desafiantes, mejorando la inmersión del jugador con una inteligencia artificial realista.</p>
+                    <p data-translate="mini_fps_description">Shooter en primera persona desarrollado en Unreal Engine 5...</p>
                     <div class="mini-project-tech">
                         <span class="mini-tech-tag">UE5</span>
                         <span class="mini-tech-tag">FPS</span>
                         <span class="mini-tech-tag">IA</span>
                     </div>
                     <div class="mini-project-links">
-                        <a href="#">Ver código →</a>
-                        <a href="#">Unity Package →</a>
+                        <a href="#" data-translate="mini_fps_link_code">Ver código →</a>
+                        <a href="#" data-translate="mini_fps_link_package">Unity Package →</a>
                     </div>
                 </div>
 
                 <div class="mini-project-card fade-up">
                     <div class="mini-project-header">
                         <div class="mini-project-icon"><img src="res/vr-glasses.png" alt="VR Shooter arcade" /></div>
-                        <h3>VR Shooter minigame</h3>
+                        <h3 data-translate="mini_vr_title">VR Shooter minigame</h3>
                     </div>
-                    <p>Prototipo de shooter arcade en realidad virtual desarrollado en Unity. Incluye mecánicas rápidas y un sistema de puntuación para ofrecer una experiencia competitiva y divertida en VR.</p>
+                    <p data-translate="mini_vr_description">Prototipo de shooter arcade en realidad virtual desarrollado en Unity...</p>
                     <div class="mini-project-tech">
                         <span class="mini-tech-tag">Unity</span>
                         <span class="mini-tech-tag">VR</span>
                         <span class="mini-tech-tag">Arcade</span>
                     </div>
                     <div class="mini-project-links">
-                        <a href="#">Probar →</a>
-                        <a href="#">Ver código →</a>
+                        <a href="#" data-translate="mini_vr_link_try">Probar →</a>
+                        <a href="#" data-translate="mini_vr_link_code">Ver código →</a>
                     </div>
                 </div>
 
                 <div class="mini-project-card fade-up">
                     <div class="mini-project-header">
                         <div class="mini-project-icon"><img src="res/gem.png" alt="Minimalistic game" /></div>
-                        <h3>Juego minimalista</h3>
+                        <h3 data-translate="mini_minimal_title">Juego minimalista</h3>
                     </div>
-                    <p>Juego arcade minimalista con estética geométrica, controlado únicamente con los joysticks del mando. El jugador maneja dos personajes a la vez para defender un cristal central: uno con escudo y otro con disparos, combinando acción y coordinación.</p>
+                    <p data-translate="mini_minimal_description">Juego arcade minimalista con estética geométrica...</p>
                     <div class="mini-project-tech">
                         <span class="mini-tech-tag">Minimalista</span>
                         <span class="mini-tech-tag">Unity</span>
                         <span class="mini-tech-tag">Twin stick</span>
                     </div>
                     <div class="mini-project-links">
-                        <a href="#">Ver demos →</a>
-                        <a href="#">Descargar →</a>
+                        <a href="#" data-translate="mini_minimal_link_demo">Ver demos →</a>
+                        <a href="#" data-translate="mini_minimal_link_download">Descargar →</a>
                     </div>
                 </div>
 
                 <div class="mini-project-card fade-up">
                     <div class="mini-project-header">
                         <div class="mini-project-icon"><img src="res/ship.png" alt="Bullet hell" /></div>
-                        <h3>Bullet hell</h3>
+                        <h3 data-translate="mini_bullet_title">Bullet hell</h3>
                     </div>
-                    <p>Prototipo de bullet hell espacial desarrollado en Unity, centrado en combates por oleadas con patrones de disparo cada vez más exigentes. Combina jugabilidad arcade clásica con un ritmo intenso y progresivo.</p>
+                    <p data-translate="mini_bullet_description">Prototipo de bullet hell espacial desarrollado en Unity...</p>
                     <div class="mini-project-tech">
                         <span class="mini-tech-tag">Unity</span>
                         <span class="mini-tech-tag">Bullet hell</span>
                     </div>
                     <div class="mini-project-links">
-                        <a href="#">Jugar →</a>
-                        <a href="#">Post-mortem →</a>
+                        <a href="#" data-translate="mini_bullet_link_play">Jugar →</a>
+                        <a href="#" data-translate="mini_bullet_link_postmortem">Post-mortem →</a>
                     </div>
                 </div>
 
                 <div class="mini-project-card fade-up">
                     <div class="mini-project-header">
                         <div class="mini-project-icon"><img src="res/Pacman.png" alt="Multiplayer pacman" /></div>
-                        <h3>Multiplayer pacman</h3>
+                        <h3 data-translate="mini_pacman_title">Multiplayer pacman</h3>
                     </div>
-                    <p>Prototipo multijugador inspirado en Pac-Man, desarrollado con Unity y Photon PUN.</p>
+                    <p data-translate="mini_pacman_description">Prototipo multijugador inspirado en Pac-Man...</p>
                     <div class="mini-project-tech">
                         <span class="mini-tech-tag">Unity</span>
                         <span class="mini-tech-tag">Multiplayer</span>
                         <span class="mini-tech-tag">Photon PUN</span>
                     </div>
                     <div class="mini-project-links">
-                        <a href="#">Ver código →</a>
+                        <a href="#" data-translate="mini_pacman_link_code">Ver código →</a>
                     </div>
                 </div>
+
                 <div class="mini-project-card fade-up">
                     <div class="mini-project-header">
                         <div class="mini-project-icon"><img src="res/smartphone.png" alt="Aplicación móvil" /></div>
-                        <h3>Mobile app</h3>
+                        <h3 data-translate="mini_mobile_title">Mobile app</h3>
                     </div>
-                    <p>Aplicación móvil desarrollada con Android Studio que mediante una API te permite acceder a un listado de juegos filtrando por nota y desarrollador.</p>
+                    <p data-translate="mini_mobile_description">Aplicación móvil desarrollada con Android Studio...</p>
                     <div class="mini-project-tech">
                         <span class="mini-tech-tag">Android Studio</span>
                         <span class="mini-tech-tag">Kotlin</span>
                     </div>
                     <div class="mini-project-links">
-                        <a href="#">Ver código →</a>
+                        <a href="#" data-translate="mini_mobile_link_code">Ver código →</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <section id="habilidades">
-            <h2 class="section-title fade-up">Habilidades</h2>
-            <p class="section-subtitle fade-up">Herramientas y tecnologías que domino</p>
-            
+            <h2 class="section-title fade-up" data-translate="skills_title">Habilidades</h2>
+            <p class="section-subtitle fade-up" data-translate="skills_subtitle">Herramientas y tecnologías que domino</p>
+
             <div class="skills-grid">
                 <div class="skill-card fade-up">
                     <div class="skill-icon">🎮</div>
-                    <h3>Game Engines</h3>
+                    <h3 data-translate="skills_engines">Game Engines</h3>
                     <ul class="skill-list">
                         <li>Unreal Engine</li>
                         <li>Unity</li>
@@ -995,7 +990,7 @@
 
                 <div class="skill-card fade-up">
                     <div class="skill-icon">💻</div>
-                    <h3>Programación</h3>
+                    <h3 data-translate="skills_programming">Programación</h3>
                     <ul class="skill-list">
                         <li>C#, C++, C</li>
                         <li>OpenGL</li>
@@ -1008,38 +1003,39 @@
         </section>
 
         <section id="sobre-mi">
-            <h2 class="section-title fade-up">Sobre mí</h2>
+            <h2 class="section-title fade-up" data-translate="about_title">Sobre mí</h2>
             <div class="about-content fade-up">
                 <div class="about-image"><img src="res/Aboutme.jpg" /></div>
                 <div class="about-text">
-                    <p>Soy Daniel de Castro Isasi, un desarrollador de videojuegos con formación tanto técnica como académica. Tengo un HND en Programación de Videojuegos por la ESAT, una carrera de Informática y un Máster en Inteligencia Artificial por la UPV, lo que me ha proporcionado una base sólida tanto en desarrollo como en tecnologías emergentes.</p>
-            
-                    <p>Mi experiencia abarca desde el desarrollo de motores gráficos desde cero hasta la creación de experiencias completas en realidad virtual. He trabajado con equipos multidisciplinarios de hasta 16 personas, utilizando herramientas como Unreal Engine 5, Unity, y tecnologías avanzadas como OpenGL y Bullet Physics. Mi proyecto más destacado, "Inside the Crow's Nest", fue desarrollado durante 9 meses y está disponible en Steam.</p>
-            
-                    <p>Me gusta mucho el desarrollo de sistemas de gameplay así como IA que aporte vida, inmersión y desafío al jugador, y disfruto del desarrollo de un videojuego desde las fases de prototipado hasta la realización de los últimos perfiles y mejoras en los mismos.</p></div>
+                    <p data-translate="about_paragraph1">Soy Daniel de Castro Isasi...</p>
+                    <p data-translate="about_paragraph2">Mi experiencia abarca desde el desarrollo...</p>
+                    <p data-translate="about_paragraph3">Me gusta mucho el desarrollo de sistemas...</p>
+                </div>
             </div>
         </section>
 
         <section id="contacto">
-    <h2 class="section-title fade-up">Contacto</h2>
-    <div class="contact-grid fade-up">
-        <div class="contact-info">
-            <h3>Hablemos</h3>
-            <p>Estoy interesado en oportunidades de desarrollo de videojuegos y siempre abierto a conversaciones sobre la industria.</p>
-            <div class="contact-links">
-                <a href="mailto:dadecastrois@gmail.com" class="contact-link">
-                    <span>📧</span>
-                    <span>dadecastrois@gmail.com</span>
-                </a>
-                <a href="https://www.linkedin.com/in/daniel-de-castro-isasi-99aa58220/" class="contact-link">
-                    <span>💼</span>
-                    <span>LinkedIn</span>
-                </a>
+            <h2 class="section-title fade-up" data-translate="contact_title">Contacto</h2>
+            <div class="contact-grid fade-up">
+                <div class="contact-info">
+                    <h3 data-translate="contact_subtitle">Hablemos</h3>
+                    <p data-translate="contact_description">Estoy interesado en oportunidades...</p>
+                    <div class="contact-links">
+                        <a href="mailto:dadecastrois@gmail.com" class="contact-link">
+                            <span>📧</span>
+                            <span>dadecastrois@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/daniel-de-castro-isasi-99aa58220/" class="contact-link">
+                            <span>💼</span>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
+</body>
+
 
 
     <script>
