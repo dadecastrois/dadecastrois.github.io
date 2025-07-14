@@ -325,84 +325,147 @@
 
 
     <script>
-    // Carrusel mejorado con soporte para múltiples carruseles
-    const carousels = {
-        carousel1: {
-            currentSlide: 0,
-            totalSlides: 3
+        // Sistema de carruseles mejorado y automático
+        const carousels = {};
+
+        // Función para inicializar carruseles automáticamente
+        function initCarousels() {
+            // Buscar todos los carruseles en la página
+            document.querySelectorAll('.carousel-container').forEach((container, index) => {
+                const track = container.querySelector('.carousel-track');
+                const slides = track.querySelectorAll('.carousel-slide');
+                const carouselId = `carousel${index + 1}`;
+                
+                // Asignar ID si no lo tiene
+                if (!track.id) {
+                    track.id = `carouselTrack${index + 1}`;
+                }
+                
+                // Configurar el carrusel con el número real de slides
+                carousels[carouselId] = {
+                    currentSlide: 0,
+                    totalSlides: slides.length,
+                    trackId: track.id
+                };
+                
+                // Actualizar los botones para usar el ID correcto
+                const prevBtn = container.querySelector('.carousel-prev');
+                const nextBtn = container.querySelector('.carousel-next');
+                const indicators = container.querySelectorAll('.indicator');
+                
+                if (prevBtn) prevBtn.onclick = () => changeSlide(carouselId, -1);
+                if (nextBtn) nextBtn.onclick = () => changeSlide(carouselId, 1);
+                
+                indicators.forEach((indicator, i) => {
+                    indicator.onclick = () => currentSlide(carouselId, i + 1);
+                });
+            });
         }
-    };
 
-    function changeSlide(carouselId, direction) {
-        const carousel = carousels[carouselId];
-        const track = document.getElementById(`carouselTrack1`);
-        const indicators = track.parentElement.querySelectorAll('.indicator');
-        
-        carousel.currentSlide += direction;
-        
-        // Wrap around
-        if (carousel.currentSlide >= carousel.totalSlides) {
-            carousel.currentSlide = 0;
-        } else if (carousel.currentSlide < 0) {
-            carousel.currentSlide = carousel.totalSlides - 1;
-        }
-        
-        // Update display
-        updateCarouselDisplay(carouselId);
-    }
-
-    function currentSlide(carouselId, slideNumber) {
-        const carousel = carousels[carouselId];
-        carousel.currentSlide = slideNumber - 1;
-        updateCarouselDisplay(carouselId);
-    }
-
-    function updateCarouselDisplay(carouselId) {
-        const carousel = carousels[carouselId];
-        const track = document.getElementById(`carouselTrack1`);
-        const indicators = track.parentElement.querySelectorAll('.indicator');
-        
-        // Move track
-        track.style.transform = `translateX(-${carousel.currentSlide * 100}%)`;
-        
-        // Update indicators
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === carousel.currentSlide);
-        });
-    }
-
-    // Auto-play (opcional)
-    setInterval(() => {
-        changeSlide('carousel1', 1);
-    }, 5000);
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') changeSlide('carousel1', -1);
-        if (e.key === 'ArrowRight') changeSlide('carousel1', 1);
-    });
-
-    // Touch/swipe support
-    let startX = 0;
-    let endX = 0;
-
-    document.getElementById('carouselTrack1').addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-    });
-
-    document.getElementById('carouselTrack1').addEventListener('touchend', (e) => {
-        endX = e.changedTouches[0].clientX;
-        const diff = startX - endX;
-        
-        if (Math.abs(diff) > 50) {
-            if (diff > 0) {
-                changeSlide('carousel1', 1);  // Swipe left
-            } else {
-                changeSlide('carousel1', -1); // Swipe right
+        function changeSlide(carouselId, direction) {
+            const carousel = carousels[carouselId];
+            if (!carousel) return;
+            
+            const track = document.getElementById(carousel.trackId);
+            const indicators = track.parentElement.querySelectorAll('.indicator');
+            
+            carousel.currentSlide += direction;
+            
+            // Wrap around
+            if (carousel.currentSlide >= carousel.totalSlides) {
+                carousel.currentSlide = 0;
+            } else if (carousel.currentSlide < 0) {
+                carousel.currentSlide = carousel.totalSlides - 1;
             }
+            
+            // Update display
+            updateCarouselDisplay(carouselId);
         }
-    });
-</script>
+
+        function currentSlide(carouselId, slideNumber) {
+            const carousel = carousels[carouselId];
+            if (!carousel) return;
+            
+            carousel.currentSlide = slideNumber - 1;
+            updateCarouselDisplay(carouselId);
+        }
+
+        function updateCarouselDisplay(carouselId) {
+            const carousel = carousels[carouselId];
+            if (!carousel) return;
+            
+            const track = document.getElementById(carousel.trackId);
+            const indicators = track.parentElement.querySelectorAll('.indicator');
+            
+            // Move track
+            track.style.transform = `translateX(-${carousel.currentSlide * 100}%)`;
+            
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === carousel.currentSlide);
+            });
+        }
+
+        // Inicializar todos los carruseles cuando se carga la página
+        document.addEventListener('DOMContentLoaded', initCarousels);
+
+        // Touch/swipe support para todos los carruseles
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.carousel-track').forEach(track => {
+                let startX = 0;
+                let endX = 0;
+
+                track.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+
+                track.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+                    
+                    if (Math.abs(diff) > 50) {
+                        // Encontrar el carrusel correspondiente
+                        const carouselId = Object.keys(carousels).find(id => 
+                            carousels[id].trackId === track.id
+                        );
+                        
+                        if (carouselId) {
+                            if (diff > 0) {
+                                changeSlide(carouselId, 1);  // Swipe left
+                            } else {
+                                changeSlide(carouselId, -1); // Swipe right
+                            }
+                        }
+                    }
+                });
+            });
+        });
+
+        // Keyboard navigation (funciona en el carrusel que esté visible)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                // Encontrar el carrusel más visible en pantalla
+                let visibleCarousel = null;
+                let maxVisibility = 0;
+                
+                Object.keys(carousels).forEach(carouselId => {
+                    const track = document.getElementById(carousels[carouselId].trackId);
+                    const rect = track.getBoundingClientRect();
+                    const visibility = Math.max(0, Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0));
+                    
+                    if (visibility > maxVisibility) {
+                        maxVisibility = visibility;
+                        visibleCarousel = carouselId;
+                    }
+                });
+                
+                if (visibleCarousel) {
+                    if (e.key === 'ArrowLeft') changeSlide(visibleCarousel, -1);
+                    if (e.key === 'ArrowRight') changeSlide(visibleCarousel, 1);
+                }
+            }
+        });
+    </script>
     <script>
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
