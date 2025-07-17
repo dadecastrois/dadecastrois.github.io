@@ -6,6 +6,7 @@ const translations = {
         nav_skills: "Habilidades",
         nav_about: "Sobre mí",
         nav_contact: "Contacto",
+
         
         // Hero Section
         hero_description: "Desarrollador de videojuegos con un HND en Programación de videojuegos por la ESAT, una carrera de informática y máster en inteligencia artificial por la UPV. Tengo experiencia desarrollando proyectos tanto personales como académicos tanto en Unreal Engine 5 como en Unity.",
@@ -15,34 +16,29 @@ const translations = {
         // Proyectos principales
         projects_title: "Proyectos Destacados",
         projects_subtitle: "Una selección de mis trabajos más representativos",
+        project_demo: "Ver demo →",
+        project_steam: "Página de Steam →",
         
         // Inside the Crow's Nest
         project_crows_nest_title: "Inside the crow's nest",
         project_crows_nest_description: "Proyecto final del HND en programación de videojuegos, desarrollado durante 9 meses en un equipo de 16 personas formado por programadores, artistas y diseñadores. El juego, creado con Unreal Engine, tiene una duración aproximada de hora y media y busca capturar la esencia de los survival horror clásicos como los primeros Resident Evil. Incluye controles tipo tanque, cámaras fijas, enemigos, puzles y gestión de inventario. A pesar de su enfoque nostálgico, se han modernizado tanto el control como la presentación para ofrecer una experiencia accesible y atractiva tanto para nuevos jugadores como para fans de los clásicos.",
-        project_crows_nest_link: "Página de Steam →",
-        
+
         // Graphics Engine
         project_engine_title: "Graphics Engine",
         project_engine_description: "Motor gráfico desarrollado desde cero. Implementa técnicas avanzadas como forward y deferred rendering, sistema de sombras, portales, físicas mediante el uso de la librería Bullet, scripting en Lua y una arquitectura ECS con jerarquías. Además, incluye herramientas de edición integradas con ImGui y un sistema de hilos para tareas pesadas.",
-        project_engine_link: "Ver demo →",
+
         
         // Meta Avatars
         project_avatars_title: "Networked Meta Avatars",
         project_avatars_description: "Proyecto de realidad virtual desarrollado como parte del Trabajo de Fin de Máster, centrado en la integración de avatares de Meta en un entorno multijugador con interacción. Utilizando Proton y tecnología de Meta para VR, se implementó una sala virtual compartida donde varios usuarios pueden conectarse y comunicarse a través de sus avatares, con capacidad para interactuar con el entorno. El objetivo fue estudiar la viabilidad de utilizar entornos de realidad virtual como alternativa más humana y accesible a las sesiones psicológicas tradicionales, evitando la frialdad de las videollamadas sin requerir presencialidad.",
-        project_avatars_link_trailer: "Trailer →",
-        project_avatars_link_demo: "Demo →",
         
         // TFG Game
         project_tfg_title: "TFG Game",
         project_tfg_description: "Videojuego 2D de plataformas desarrollado en Unity como parte del Trabajo de Fin de Grado, en colaboración con otro desarrollador y utilizando Git para control de versiones. El juego incluye enemigos con inteligencia artificial, un sistema de sigilo, loot e inventario, así como efectos de sonido y mecánicas de combate. Se centró en crear una experiencia fluida y completa desde el diseño hasta la implementación final.",
-        project_tfg_link_demo: "Ver demo →",
-        project_tfg_link_code: "Código fuente →",
         
         // Soul Apart
         project_soul_title: "Game Jam - Soul apart",
         project_soul_description: "Proyecto desarrollado en 48 horas como entrada para una game jam, en colaboración con diseñadores y artistas. Se trata de un juego 3D tipo bullet hell creado en Unity, en el que el jugador, con muy poca vida, debe esquivar ataques enemigos y devolver aquellos proyectiles que lo permiten para derrotar a una bruja.",
-        project_soul_link_demo: "Ver demo →",
-        project_soul_link_code: "Código fuente →",
         
         // Otros proyectos
         other_projects_title: "Otros Proyectos",
@@ -51,36 +47,26 @@ const translations = {
         // FPS Prototype
         mini_fps_title: "First person shooter prototype",
         mini_fps_description: "Shooter en primera persona desarrollado en Unreal Engine 5, centrado en una IA avanzada para enemigos mediante Behavior Trees. El proyecto destaca por crear combates dinámicos y desafiantes, mejorando la inmersión del jugador con una inteligencia artificial realista.",
-        mini_fps_link_code: "Ver código →",
-        mini_fps_link_package: "Unity Package →",
         
         // VR Shooter
         mini_vr_title: "VR Shooter minigame",
         mini_vr_description: "Prototipo de shooter arcade en realidad virtual desarrollado en Unity. Incluye mecánicas rápidas y un sistema de puntuación para ofrecer una experiencia competitiva y divertida en VR.",
-        mini_vr_link_try: "Probar →",
-        mini_vr_link_code: "Ver código →",
         
         // Minimalist Game
         mini_minimal_title: "Juego minimalista",
         mini_minimal_description: "Juego arcade minimalista con estética geométrica, controlado únicamente con los joysticks del mando. El jugador maneja dos personajes a la vez para defender un cristal central: uno con escudo y otro con disparos, combinando acción y coordinación.",
-        mini_minimal_link_demo: "Ver demos →",
-        mini_minimal_link_download: "Descargar →",
         
         // Bullet Hell
         mini_bullet_title: "Bullet hell",
         mini_bullet_description: "Prototipo de bullet hell espacial desarrollado en Unity, centrado en combates por oleadas con patrones de disparo cada vez más exigentes. Combina jugabilidad arcade clásica con un ritmo intenso y progresivo.",
-        mini_bullet_link_play: "Jugar →",
-        mini_bullet_link_postmortem: "Post-mortem →",
         
         // Multiplayer Pacman
         mini_pacman_title: "Multiplayer pacman",
         mini_pacman_description: "Prototipo multijugador inspirado en Pac-Man, desarrollado con Unity y Photon PUN.",
-        mini_pacman_link_code: "Ver código →",
         
         // Mobile App
         mini_mobile_title: "Mobile app",
         mini_mobile_description: "Aplicación móvil desarrollada con Android Studio que mediante una API te permite acceder a un listado de juegos filtrando por nota y desarrollador.",
-        mini_mobile_link_code: "Ver código →",
         
         // Habilidades
         skills_title: "Habilidades",
@@ -115,34 +101,28 @@ const translations = {
         // Main Projects
         projects_title: "Featured Projects",
         projects_subtitle: "A selection of my most representative works",
+        project_demo: "View demo →",
+        project_steam: "Steam page→",
         
         // Inside the Crow's Nest
         project_crows_nest_title: "Inside the crow's nest",
         project_crows_nest_description: "Final project of the HND in game programming, developed over 9 months in a team of 16 people consisting of programmers, artists and designers. The game, created with Unreal Engine, has an approximate duration of an hour and a half and seeks to capture the essence of classic survival horror games like the first Resident Evil. It includes tank controls, fixed cameras, enemies, puzzles and inventory management. Despite its nostalgic approach, both control and presentation have been modernized to offer an accessible and attractive experience for both new players and fans of the classics.",
-        project_crows_nest_link: "Steam page →",
         
         // Graphics Engine
         project_engine_title: "Graphics Engine",
         project_engine_description: "Graphics engine developed from scratch. Implements advanced techniques such as forward and deferred rendering, shadow system, portals, physics using the Bullet library, Lua scripting and an ECS architecture with hierarchies. It also includes integrated editing tools with ImGui and a threading system for heavy tasks.",
-        project_engine_link: "View demo →",
         
         // Meta Avatars
         project_avatars_title: "Networked Meta Avatars",
         project_avatars_description: "Virtual reality project developed as part of the Master's Thesis, focused on the integration of Meta avatars in a multiplayer environment with interaction. Using Proton and Meta technology for VR, a shared virtual room was implemented where multiple users can connect and communicate through their avatars, with the ability to interact with the environment. The goal was to study the feasibility of using virtual reality environments as a more human and accessible alternative to traditional psychological sessions, avoiding the coldness of video calls without requiring physical presence.",
-        project_avatars_link_trailer: "Trailer →",
-        project_avatars_link_demo: "Demo →",
         
         // TFG Game
         project_tfg_title: "TFG Game",
         project_tfg_description: "2D platform game developed in Unity as part of the Bachelor's Thesis, in collaboration with another developer and using Git for version control. The game includes enemies with artificial intelligence, a stealth system, loot and inventory, as well as sound effects and combat mechanics. It focused on creating a smooth and complete experience from design to final implementation.",
-        project_tfg_link_demo: "View demo →",
-        project_tfg_link_code: "Source code →",
         
         // Soul Apart
         project_soul_title: "Game Jam - Soul apart",
         project_soul_description: "Project developed in 48 hours as an entry for a game jam, in collaboration with designers and artists. It's a 3D bullet hell game created in Unity, where the player, with very little health, must dodge enemy attacks and return those projectiles that allow it to defeat a witch.",
-        project_soul_link_demo: "View demo →",
-        project_soul_link_code: "Source code →",
         
         // Other Projects
         other_projects_title: "Other Projects",
@@ -151,36 +131,26 @@ const translations = {
         // FPS Prototype
         mini_fps_title: "First person shooter prototype",
         mini_fps_description: "First-person shooter developed in Unreal Engine 5, focused on advanced AI for enemies using Behavior Trees. The project stands out for creating dynamic and challenging combat, improving player immersion with realistic artificial intelligence.",
-        mini_fps_link_code: "View code →",
-        mini_fps_link_package: "Unity Package →",
         
         // VR Shooter
         mini_vr_title: "VR Shooter minigame",
         mini_vr_description: "Arcade shooter prototype in virtual reality developed in Unity. Includes fast mechanics and a scoring system to offer a competitive and fun VR experience.",
-        mini_vr_link_try: "Try it →",
-        mini_vr_link_code: "View code →",
         
         // Minimalist Game
         mini_minimal_title: "Minimalist game",
         mini_minimal_description: "Minimalist arcade game with geometric aesthetics, controlled only with the controller joysticks. The player manages two characters at once to defend a central crystal: one with shield and another with shots, combining action and coordination.",
-        mini_minimal_link_demo: "View demos →",
-        mini_minimal_link_download: "Download →",
         
         // Bullet Hell
         mini_bullet_title: "Bullet hell",
         mini_bullet_description: "Space bullet hell prototype developed in Unity, focused on wave-based combat with increasingly demanding shooting patterns. Combines classic arcade gameplay with an intense and progressive rhythm.",
-        mini_bullet_link_play: "Play →",
-        mini_bullet_link_postmortem: "Post-mortem →",
         
         // Multiplayer Pacman
         mini_pacman_title: "Multiplayer pacman",
         mini_pacman_description: "Multiplayer prototype inspired by Pac-Man, developed with Unity and Photon PUN.",
-        mini_pacman_link_code: "View code →",
         
         // Mobile App
         mini_mobile_title: "Mobile app",
         mini_mobile_description: "Mobile application developed with Android Studio that through an API allows you to access a list of games filtering by rating and developer.",
-        mini_mobile_link_code: "View code →",
         
         // Skills
         skills_title: "Skills",
