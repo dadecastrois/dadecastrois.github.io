@@ -800,3 +800,21 @@
 .indicator.active {
     background: white;
 }
+
+.project-link-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.project-link-wrapper .project {
+  cursor: pointer;
+}
+
+.project-link-wrapper h3,
+.project-link-wrapper p,
+.project-link-wrapper span,
+.project-link-wrapper .tech-tag,
+.project-link-wrapper .project-links {
+  text-decoration: none;
+  color: inherit;
+}
