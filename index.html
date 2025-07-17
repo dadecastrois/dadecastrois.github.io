@@ -47,8 +47,7 @@
             <p class="section-subtitle fade-up" data-translate="projects_subtitle">Una selección de mis trabajos más representativos</p>
 
             <div class="projects-container">
-                <div class="project fade-up">
-                    <!-- <div class="project-image"><img src="res/CrowsNest2.jpg" alt="Inside the Crow's Nest" /></div> -->
+                <!-- <div class="project fade-up">
                     <div class="project-image">
                         <div class="carousel-container">
                             <div class="carousel-track" id="carouselTrack1">
@@ -67,7 +66,6 @@
                                 <div class="carousel-slide">
                                     <img src="res/CrowsNest6.jpg" alt="Inside the Crow's Nest - Image 5" />
                                 </div>
-                                <!-- Más slides según necesites -->
                             </div>
         
                             <button class="carousel-nav carousel-prev" onclick="changeSlide('carousel1', -1)">❮</button>
@@ -79,7 +77,6 @@
                             <span class="indicator" onclick="currentSlide('carousel1', 3)"></span>
                             <span class="indicator" onclick="currentSlide('carousel1', 4)"></span>
                             <span class="indicator" onclick="currentSlide('carousel1', 5)"></span>
-                            <!-- Más indicadores -->
                         </div>
                     </div>
                 </div>
@@ -97,7 +94,60 @@
                             <a href="https://store.steampowered.com/app/3719120/Inside_the_Crows_Nest/" data-translate="project_steam">Steam page →</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
+                <a href="crows-nest.html" class="project-link-wrapper">
+                    <div class="project fade-up">
+                        <div class="project-image">
+                        <div class="carousel-container">
+                            <div class="carousel-track" id="carouselTrack1">
+                            <div class="carousel-slide">
+                                <img src="res/CrowsNest2.jpg" alt="Inside the Crow's Nest - Image 1" />
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="res/CrowsNest3.jpg" alt="Inside the Crow's Nest - Image 2" />
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="res/CrowsNest4.jpg" alt="Inside the Crow's Nest - Image 3" />
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="res/CrowsNest5.jpg" alt="Inside the Crow's Nest - Image 4" />
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="res/CrowsNest6.jpg" alt="Inside the Crow's Nest - Image 5" />
+                            </div>
+                            </div>
+
+                            <button class="carousel-nav carousel-prev" onclick="changeSlide('carousel1', -1); event.stopPropagation(); return false;">❮</button>
+                            <button class="carousel-nav carousel-next" onclick="changeSlide('carousel1', 1); event.stopPropagation(); return false;">❯</button>
+
+                            <div class="carousel-indicators">
+                            <span class="indicator active" onclick="currentSlide('carousel1', 1); event.stopPropagation(); return false;"></span>
+                            <span class="indicator" onclick="currentSlide('carousel1', 2); event.stopPropagation(); return false;"></span>
+                            <span class="indicator" onclick="currentSlide('carousel1', 3); event.stopPropagation(); return false;"></span>
+                            <span class="indicator" onclick="currentSlide('carousel1', 4); event.stopPropagation(); return false;"></span>
+                            <span class="indicator" onclick="currentSlide('carousel1', 5); event.stopPropagation(); return false;"></span>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="project-info">
+                        <h3 data-translate="project_crows_nest_title">Inside the crow's nest</h3>
+                        <p data-translate="project_crows_nest_description">Proyecto final del HND en programación de videojuegos, desarrollado durante 9 meses en un equipo de 16 personas formado por programadores, artistas y diseñadores. El juego, creado con Unreal Engine, tiene una duración aproximada de hora y media y busca capturar la esencia de los survival horror clásicos como los primeros Resident Evil. Incluye controles tipo tanque, cámaras fijas, enemigos, puzles y gestión de inventario. A pesar de su enfoque nostálgico, se han modernizado tanto el control como la presentación para ofrecer una experiencia accesible y atractiva tanto para nuevos jugadores como para fans de los clásicos.</p>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">UE5</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Blueprints</span>
+                            <span class="tech-tag">Behavior trees</span>
+                            <span class="tech-tag">Perforce</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://store.steampowered.com/app/3719120/Inside_the_Crows_Nest/" data-translate="project_steam">Steam page →</a>
+                        </div>
+                        </div>
+                    </div>
+                    </a>
+
 
                 <div class="project fade-up">
                     <div class="project-image">
@@ -211,6 +261,7 @@
                             <span class="indicator" onclick="currentSlide('carousel4', 4)"></span>
                             <span class="indicator" onclick="currentSlide('carousel4', 5)"></span>
                         </div>
+                    </div>
                     </div>
                     <div class="project-info">
                         <h3 data-translate="project_tfg_title">TFG Game</h3>
@@ -406,7 +457,7 @@
                 <div class="about-image"><img src="res/Aboutme.jpg" /></div>
                 <div class="about-text">
                     <p data-translate="about_paragraph1">Soy Daniel de Castro Isasi, un desarrollador de videojuegos con formación tanto técnica como académica. Tengo un HND en Programación de Videojuegos por la ESAT, una carrera de Informática y un Máster en Inteligencia Artificial por la UPV, lo que me ha proporcionado una base sólida tanto en desarrollo como en tecnologías emergentes.</p>
-                    <p data-translate="about_paragraph2">Mi experiencia abarca desde el desarrollo de motores gráficos desde cero hasta la creación de experiencias completas en realidad virtual. He trabajado con equipos multidisciplinarios de hasta 16 personas, utilizando herramientas como Unreal Engine 5, Unity, y tecnologías avanzadas como OpenGL y Bullet Physics. Mi proyecto más destacado, \"Inside the Crow's Nest\", fue desarrollado durante 9 meses y está disponible en Steam.</p>
+                    <p data-translate="about_paragraph2">Mi experiencia abarca desde el desarrollo de motores gráficos desde cero hasta la creación de experiencias completas en realidad virtual. He trabajado con equipos multidisciplinarios de hasta 16 personas, utilizando herramientas como Unreal Engine 5, Unity, y tecnologías avanzadas como OpenGL y Bullet Physics. Mi proyecto más destacado, "Inside the Crow's Nest", fue desarrollado durante 9 meses y está disponible en Steam.</p>
                     <p data-translate="about_paragraph3">Me gusta mucho el desarrollo de sistemas de gameplay así como IA que aporte vida, inmersión y desafío al jugador, y disfruto del desarrollo de un videojuego desde las fases de prototipado hasta la realización de los últimos perfiles y mejoras en los mismos.</p>
                 </div>
             </div>
